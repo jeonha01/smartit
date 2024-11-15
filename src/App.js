@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import { Routes, Route, Link, Navigate } from 'react-router-dom';
+import Mainpage from './page/Mainpage';
+import Loadingpage from './page/Loadingpage';
+import Loginpage from './page/Loginpage';
 
 function App() {
+  const [authenticate, setAuthenticate] = useState(false)
+  const PrivateRoute = () => {
+    return authenticate == true ? <Mainpage /> : <Navigate to="/login" />
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path='/' element={<PrivateRoute />} />
+        <Route path='/login' element={<Loginpage />} />
+        <Route path='/loading' element={<Loadingpage />} />
+      </Routes>
     </div>
   );
 }
