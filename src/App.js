@@ -14,7 +14,7 @@ function App() {
     <div>
       <Routes>
         <Route path='/' element={<PrivateRoute />} />
-        <Route path='/login' element={<Loginpage />} />
+        <Route path='/login' element={<Loginpage setAuthenticate={setAuthenticate}/>} />
         <Route path='/loading' element={<Loadingpage />} />
       </Routes>
     </div>
