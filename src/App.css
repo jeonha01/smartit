@@ -13,12 +13,12 @@ body {
     position: fixed; /* 항상 화면에 고정 */
     bottom: 0; /* 화면 하단에 고정 */
     width: 100%; /* 화면 전체 너비 사용 */
-    background-color: #333; /* 어두운 배경색 */
-    color: white;
+    background-color: white; /* 어두운 배경색 */
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0; /* 위아래 여백 추가 */
+    padding: 30px 0; /* 위아래 여백 추가 */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* 상단 그림자 */
     z-index: 10; /* 다른 요소 위에 표시 */
 }
@@ -39,6 +39,7 @@ body {
     text-align: center; /* 중앙 정렬 */
     padding: 10px 0;
     font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
 }
