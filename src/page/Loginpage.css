@@ -8,32 +8,42 @@ body {
 
 /* SweetAlert2 창 스타일 */
 .swal-popup {
-  font-size: 0.9rem; /* 글씨 크기 */
-  width: 300px; /* 창 너비 */
-  height: 200px; /* 창 높이 */
-  border-radius: 7.5px; /* 둥근 모서리 */
+  font-size: 0.9rem;
+  /* 글씨 크기 */
+  width: 300px;
+  /* 창 너비 */
+  height: 200px;
+  /* 창 높이 */
+  border-radius: 7.5px;
+  /* 둥근 모서리 */
   display: flex;
-  flex-direction: column; 
-  justify-content: center; 
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 0; /* 내부 여백 제거 */
+  padding: 0;
+  /* 내부 여백 제거 */
   box-sizing: border-box;
 }
 
 /* 버튼 스타일 */
 .swal-button {
-  background-color: crimson; /* 버튼 빨간색 */
+  background-color: crimson;
+  /* 버튼 빨간색 */
   color: white;
   font-size: 1.05rem;
   border: none;
-  border-radius: 7.5px; /* 버튼 모서리와 알림창 경계 맞춤 */
-  height: 55px; /* 버튼 높이 */
+  border-radius: 7.5px;
+  /* 버튼 모서리와 알림창 경계 맞춤 */
+  height: 55px;
+  /* 버튼 높이 */
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 300px; /* 버튼 너비를 알림창 너비와 맞춤 */
-  margin: 0; /* 버튼과 알림창 경계 간격 제거 */
+  width: 300px;
+  /* 버튼 너비를 알림창 너비와 맞춤 */
+  margin: 0;
+  /* 버튼과 알림창 경계 간격 제거 */
   position: relative;
-  bottom: -16px;
+  bottom: -17px;
 }
 
 .login-container {
