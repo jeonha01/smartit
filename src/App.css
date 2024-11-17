@@ -8,7 +8,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 0; /* 적절한 여백 */
+    padding: 40px 0;
+    /* 적절한 여백 */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     z-index: 10;
 }
@@ -31,13 +32,20 @@
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    position: relative; /* 선 위치를 위한 기준 */
-    transition: color 0.3s;
+    position: relative;
+    /* 선 위치를 위한 기준 */
+    outline: none;
+}
+
+.menu-item:focus {
+    outline: none;
+    /* 포커스 시에도 직사각형 제거 */
 }
 
 /* 활성화된 메뉴 스타일 */
 .menu-item.active {
-    color: black; /* 활성화된 메뉴의 글씨색 */
+    color: black;
+    /* 활성화된 메뉴의 글씨색 */
 }
 
 /* 반응형 설정 */
@@ -47,6 +55,3 @@
         padding: 8px 0;
     }
 }
-
-
-
