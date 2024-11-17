@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { Routes, Route, Link, Navigate } from 'react-router-dom';
+import { Routes, Route, Link, Navigate, useLocation } from 'react-router-dom';
 import Mainpage from './page/Mainpage';
 import Loadingpage from './page/Loadingpage';
 import Loginpage from './page/Loginpage';
@@ -11,14 +11,17 @@ function App() {
   // const PrivateRoute = () => {
   //   return authenticate == true ? <Mainpage /> : <Navigate to="/login" />
   // }
+
+  const location = useLocation()
   return (
     <div>
       <Routes>
-        <Route path='/' element={<Mainpage />} />
+        <Route path='/a' element={<Mainpage />} />
         {/* <Route path='/login' element={<Loginpage setAuthenticate={setAuthenticate} />} /> */}
-        <Route path='/loading' element={<Loadingpage />} />
+        <Route path='/' element={<Loadingpage />} />
       </Routes>
-      <Navbar />
+      {/* 메인페이지에서만 Navbar를 렌더링 */}
+      {/* {location.pathname === '/' && <Navbar />} */}
     </div>
   );
 }
