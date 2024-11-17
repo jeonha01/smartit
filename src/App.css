@@ -35,6 +35,8 @@
     position: relative;
     /* 선 위치를 위한 기준 */
     outline: none;
+    -webkit-tap-highlight-color: transparent;
+    /* 모바일 터치 효과 제거 */
 }
 
 .menu-item:focus {
