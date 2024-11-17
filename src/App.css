@@ -1,58 +1,52 @@
-/* HTML 기본 스타일 */
-html,
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden; /* 불필요한 스크롤 방지 */
-}
-
 /* Navbar 스타일 */
 .navbar {
-    position: fixed; /* 항상 화면에 고정 */
-    bottom: 0; /* 화면 하단에 고정 */
-    width: 100%; /* 화면 전체 너비 사용 */
-    background-color: white; /* 어두운 배경색 */
-    color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: gray;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 0; /* 위아래 여백 추가 */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* 상단 그림자 */
-    z-index: 10; /* 다른 요소 위에 표시 */
+    padding: 50px 0; /* 적절한 여백 */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
 
 /* 메뉴 리스트 */
 .menu-list {
     display: flex;
-    justify-content: space-around; /* 메뉴 간격 균등 배치 */
-    list-style: none; /* 불릿 제거 */
+    justify-content: space-around;
+    list-style: none;
     margin: 0;
     padding: 0;
     width: 100%;
 }
 
 /* 메뉴 아이템 */
-.menu-list li {
-    flex: 1; /* 모든 메뉴 동일한 너비 */
-    text-align: center; /* 중앙 정렬 */
+.menu-item {
+    flex: 1;
+    text-align: center;
     padding: 10px 0;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    position: relative; /* 선 위치를 위한 기준 */
+    transition: color 0.3s;
 }
 
-.menu-list li:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* 호버 시 배경 강조 */
+/* 활성화된 메뉴 스타일 */
+.menu-item.active {
+    color: black; /* 활성화된 메뉴의 글씨색 */
 }
 
 /* 반응형 설정 */
 @media (max-width: 768px) {
-    .menu-list li {
-        font-size: 12px; /* 모바일 화면에서는 글씨 크기 축소 */
+    .menu-item {
+        font-size: 12px;
         padding: 8px 0;
     }
 }
+
+
 
