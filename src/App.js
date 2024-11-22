@@ -11,7 +11,7 @@ function App() {
   const PrivateRoute = () => {
     return authenticate == true ? <Navigate to="/loading" /> : <Navigate to="/login" />
   }
-
+  const a=1
   const location = useLocation()
   return (
     <div>
